@@ -7,7 +7,7 @@
 body {
   font-size: 1.2rem;
   font-family: "Work Sans", sans-serif;
-  min-height: 4000px;
+  min-height: 2000px;
 }
 
 .hero::before {
@@ -40,7 +40,7 @@ body {
 }
 
 .hero p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .hero a {
@@ -59,86 +59,9 @@ body {
   text-shadow: var(--shadow);
 }
 
-.mynavbar {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.mynavbar .navbar-brand,
-.mynavbar .offcanvas-title {
-  font-family: "Sacramento", cursive;
-  font-size: 3rem;
-}
-
-.mynavbar .nav-link {
-  text-transform: uppercase;
-  font-size: 1.2rem;
-}
-
-.home {
-  background-image: url(img/undangan.png);
-  background-size: cover;
-  min-height: 100vh;
-  margin-top: -6.1rem;
-  padding-top: 15rem;
-  padding-bottom: 5rem;
-}
-
-.home h2 {
-  font-size: 5rem;
-  font-family: "Sacramento", sans-serif;
-  color: var(--pink);
-  font-weight: bold;
-}
-
-.home h3 {
-  font-size: 1.5rem;
-  color: #444;
-  margin-bottom: 1rem;
-}
-
-.home p {
-  font-size: 1.1rem;
-  color: #666;
-}
-
-.home .couple {
-  margin-top: 100px;
-}
-
-.home .couple h3 {
-  font-family: "Sacramento", sans-serif;
-  font-size: 3rem;
-  color: var(--pink);
-}
-
-.home .couple img {
-  width: 100%;
-}
-
-.home .heart {
-  background-color: white;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) translateY(65px);
-  border-radius: 0%;
-  color: var(--pink);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-}
-
-.home .heart i {
-  margin: auto;
-}
 /* media querry */
 /* laptop */
 @media (max-width: 992px) {
-  .home .heart {
-    display: none;
-  }
-
   html {
     font-size: 75%;
   }
@@ -157,16 +80,11 @@ body {
     padding: 40px;
     margin: 5px;
   }
-
-  .mynavbar .nav-link {
-    font-size: 1.5rem;
-    text-align: center;
-  }
 }
 /* handphone */
 @media (max-width: 576px) {
   html {
-    font-size: 60%;
+    font-size: 55%;
   }
 
   .simply-countdown > .simply-section {
