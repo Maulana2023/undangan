@@ -41,11 +41,13 @@
       class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white"
     >
       <main>
-        <h4>Kepada Bapak/Ibu/Saudara/Saudari,</h4>
+        <h4>Kepada <span></span></h4>
         <h1>Bahrul & Fia</h1>
         <p>Akan melangsungkan pernikahan dalam :</p>
         <div class="simply-countdown"></div>
-        <a href="#home" class="btn btn-lg mt-4 fw-bold">Lihat Undangan</a>
+        <a href="#home" class="btn btn-lg mt-4 fw-bold" onClick="enableScroll()"
+          >Lihat Undangan</a
+        >
       </main>
     </section>
     <!-- akhir hero -->
@@ -86,6 +88,7 @@
               <a class="nav-link" href="#info">Info</a>
               <a class="nav-link" href="#story">Story</a>
               <a class="nav-link" href="#gallery">Gallery</a>
+              <a class="nav-link" href="#rsvp">RSVP</a>
               <a class="nav-link" href="#gift">Gift</a>
             </div>
           </div>
@@ -169,6 +172,17 @@
               Jalan Dokter Wahidin No.58, Noyontaan, Kec. Pekalongan Timur, Kota
               Pekalongan, Jawa Tengah
             </p>
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.974511398242!2d109.67779677418893!3d-6.8936520931054615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e702430de4daf95%3A0x3da72924f93551d3!2sToko%20Asco%20Wahidin!5e0!3m2!1sid!2sid!4v1697211773864!5m2!1sid!2sid"
+              width="100%"
+              height="250"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+
             <a
               href="https://maps.app.goo.gl/U5ZRkoP8VcpfYnzw6"
               target="_blank"
@@ -310,14 +324,249 @@
     </section>
     <!-- akhir story -->
 
+    <!-- gallery -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <span>memori kisah kami</span>
+            <h2>Galeri Foto</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatem, nostrum?
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="row row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center"
+        >
+          <div class="col mt-4">
+            <a
+              href="https://picsum.photos/id/49/1200/768"
+              data-toggle="lightbox"
+              data-caption="This describes the image"
+            >
+              <img
+                src="https://picsum.photos/id/49/300/400"
+                alt=""
+                class="img-fluid w-100 rounded"
+              />
+            </a>
+          </div>
+          <div class="col mt-4">
+            <a
+              href="https://picsum.photos/id/50/1200/768"
+              data-toggle="lightbox"
+              data-caption="This describes the image"
+            >
+              <img
+                src="https://picsum.photos/id/50/300/400"
+                alt=""
+                class="img-fluid w-100 rounded"
+              />
+            </a>
+          </div>
+          <div class="col mt-4">
+            <a
+              href="https://picsum.photos/id/51/1200/768"
+              data-toggle="lightbox"
+              data-caption="This describes the image"
+            >
+              <img
+                src="https://picsum.photos/id/51/300/400"
+                alt=""
+                class="img-fluid w-100 rounded"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- akhir gallery -->
+
+    <!-- rsvp -->
+    <section id="rsvp" class="rsvp">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <h2>Cerita Kami</h2>
+            <p>Isi form di bawah ini untuk melakukan konfirmasi kehadiran.</p>
+          </div>
+        </div>
+
+        <form
+          class="row row-cols-md-auto g-3 align-items-center justify-content-center"
+          method="POST"
+          action="https://script.google.com/macros/s/AKfycbwfl-WOm_ogrQC881zS_rxayKEtghrNs3OA92Wx0jrJOk3Nh5Krwej5jpIB5T8JsKbb/exec"
+          id="my-form"
+        >
+          <div class="col-12">
+            <div class="mb-3">
+              <label for="nama" class="form-label">Nama</label>
+              <input type="text" class="form-control" id="nama" name="nama" />
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="mb-3">
+              <label for="jumlah" class="form-label">Jumlah</label>
+              <input
+                type="number"
+                class="form-control"
+                id="jumlah"
+                name="jumlah"
+                min="1"
+                max="5"
+                length="1"
+                value="1"
+              />
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="mb-3">
+              <label for="konfirmasi" class="form-label">Konfirmasi</label>
+              <select class="form-select" id="konfirmasi" name="konfirmasi">
+                <option selected>Pilih salah satu</option>
+                <option value="Hadir">Hadir</option>
+                <option value="Tidak Hadir">Tidak Hadir</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-">
+            <div class="mb-3">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style="margin-top: 35px"
+              >
+                Kirim
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div id="disqus_thread"></div>
+            <script>
+              /**
+               *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+               *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+              /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+              (function () {
+                // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                  s = d.createElement("script");
+                s.src = "https://undangan-uduec7xh4v.disqus.com/embed.js";
+                s.setAttribute("data-timestamp", +new Date());
+                (d.head || d.body).appendChild(s);
+              })();
+            </script>
+            <noscript
+              >Please enable JavaScript to view the
+              <a href="https://disqus.com/?ref_noscript"
+                >comments powered by Disqus.</a
+              ></noscript
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- akhir -->
+
+    <!-- gift -->
+    <section id="gift" class="gift">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <span>ungkapan tanda kasih</span>
+            <h2>Kirim Hadiah</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto,
+              doloremque.
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-center text-center">
+          <div class="col-md-6">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <div class="fw-bold">BCA</div>
+                123456789 - BAHRUL & FIA
+              </li>
+              <li class="list-group-item">
+                <div class="fw-bold">MANDIRI</div>
+                987654321 - BAHRUL & FIA
+              </li>
+              <li class="list-group-item">
+                <div class="fw-bold">SAWERIA</div>
+                <img
+                  src="img/qrhedon.png"
+                  style="height: 150px; width: 150px"
+                  alt=""
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- akhir gift -->
+
+    <footer>
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <small class="block">&copy; 2023, All Right Reserved</small>
+            <small class="block">Design by <a href="#">@fajarakbarr</a></small>
+
+            <ul>
+              <li>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="bi bi-envelope"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="bi bi-facebook"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="audio-container">
+      <audio id="song" autoplay loop>
+        <source src="audio/test.mp3" type="audio/mp3" />
+      </audio>
+
+      <div class="audio-icon-wrapper" style="display: none">
+        <i class="bi bi-disc"></i>
+      </div>
+    </div>
+
+    <!-- SCRIPT JAVASCRIPT -->
+
+    <!-- script untuk framework bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
 
+    <!-- script memanggil lightbox bootstrap 5-->
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+
+    <!-- script memanggil simply-countdown -->
     <script src="simplycountdown/simplyCountdown.min.js"></script>
 
+    <!-- script untuk menyeting simply-countdown -->
     <script>
       simplyCountdown(".simply-countdown", {
         year: 2024, // required
@@ -336,6 +585,88 @@
       });
     </script>
 
+    <!-- script untuk melock scroll pertama kali -->
+    <script>
+      const rootElemnt = document.querySelector(":root");
+      const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
+      const audioIcon = document.querySelector(".audio-icon-wrapper i");
+      let isPlaying = false;
+
+      function disableScroll() {
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+        window.onscroll = function () {
+          window.scrollTo(scrollTop, screenLeft);
+        };
+
+        rootElemnt.style.scrollBehavior = "auto";
+      }
+
+      function enableScroll() {
+        window.onscroll = function () {};
+        rootElemnt.style.scrollBehavior = "smooth";
+        localStorage.setItem("opened", "true");
+        playAudio();
+      }
+
+      function playAudio() {
+        const song = document.querySelector("#song");
+        song.volume = 0.1;
+        audioIconWrapper.style.display = "flex";
+        song.play();
+        isPlaying = true;
+      }
+
+      audioIconWrapper.onclick = function () {
+        if (isPlaying) {
+          song.pause();
+          audioIcon.classList.remove("bi-disc");
+          audioIcon.classList.add("bi-pause-circle");
+        } else {
+          song.play();
+          audioIcon.classList.add("bi-disc");
+          audioIcon.classList.remove("bi-pause-circle");
+        }
+
+        isPlaying = !isPlaying;
+      };
+
+      if (!localStorage.getItem("opened", "true")) {
+        disableScroll();
+      }
+    </script>
+
+    <!-- script untuk mengubah nama -->
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const nama = urlParams.get("n") || "";
+      const pronoun = urlParams.get("p") || "Bapak/Ibu/Saudara/Saudari";
+
+      const namaContainer = document.querySelector(".hero h4 span");
+      namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ",");
+
+      document.querySelector("#nama").value = nama;
+    </script>
+
+    <!-- script untuk googlesheets dari levinunnink -->
+    <script>
+      window.addEventListener("load", function () {
+        const form = document.getElementById("my-form");
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const data = new FormData(form);
+          const action = e.target.action;
+          fetch(action, {
+            method: "POST",
+            body: data,
+          }).then(() => {
+            alert("Konfirmasi kehadiran berhasil terkirim!");
+          });
+        });
+      });
+    </script>
+
+    <!-- script untuk menyeting canvas pada navbar -->
     <!-- <script>
       const offcanvas = document.querySelector(".offcanvas");
       const stickyTop = document.querySelector(".sticky-top");
